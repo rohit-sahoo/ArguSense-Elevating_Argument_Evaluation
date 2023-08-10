@@ -80,8 +80,30 @@ The project's results indicate the model's performance on different writing comp
 2. Monitor training progress and evaluate the model using validation data.
 
 ### Evaluation and Results:
+**Evaluation Process**
+For each sample in the dataset:
 
-- Analyze the evaluation metrics, including precision scores, to understand the model's performance on different writing components.
+1. All ground truth and prediction instances associated with a particular class are compared.
+2. The overlap between the ground truth and prediction is measured. An overlap is considered to occur when the shared portion of word indices is equal to or exceeds a threshold of 0.5.
+3. Additionally, the overlap between the prediction and the ground truth is computed using the same threshold of 0.5.
+
+Determining True Positives, False Positives, and False Negatives
+
+1. If both the overlap between ground truth and prediction and the overlap between prediction and ground truth are greater than or equal to 0.5, the prediction is considered a match and marked as a true positive.
+2. In cases where multiple matches exist, the match with the highest pair of overlaps is selected.
+3. Unmatched ground truths are identified as false negatives, indicating instances where the model did not correctly identify a class.
+4. Similarly, unmatched predictions are labeled as false positives, representing instances where the model incorrectly predicted a class.
+
+**Accuracy:**
+1. Lead 0.8063284233496999
+2. Position 0.6841560234725578
+3. Claim 0.6057328285559762
+4. Evidence 0.6816788493279887
+5. Concluding Statement 0.7827050997782705
+6. Counterclaim 0.4854732895970009
+7. Rebuttal 0.39030955585464333
+   
+Overall 0.6337691528480197
 
 ### Future Work:
 
@@ -127,6 +149,27 @@ A pre-trained DeBERTa model for sequence classification was loaded. This advance
 1. Define training arguments including output directory, learning rate, batch sizes, and others.
 2. Load a pre-trained sequence classification model (AutoModelForSequenceClassification) with the specified number of labels.
 3. Create a Trainer object to handle training and evaluation, passing the model, training arguments, datasets, and tokenizer.
+
+### Testing and Evaluation:
+
+For testing and evaluation, the project employs the multi-class logarithmic loss, commonly known as log loss. This metric is utilized to assess the quality of predictions made by the classification model.
+
+In the context of this project:
+1. Each row in the test dataset is assigned a true effectiveness label, representing the actual category of the argumentative element.
+2. The model predicts the probabilities that an observation belongs to each effectiveness label category.
+3. The log loss formula is employed to quantify the disparity between the predicted probabilities and the true labels.
+
+Log loss:
+
+log loss = -1/N * ∑(i=1 to N) ∑(j=1 to M) y_{ij} * log(p_{ij})
+
+Where:
+- N is the number of rows in the test set.
+- M is the number of class labels (in this case, the number of effectiveness categories).
+- yij is 1 if observation i is in class j and 0 otherwise.
+- pi,j is the predicted probability that observation i belongs to class j.
+
+**Accuracy is 0.65 Log Loss for argument classification**
 
 
 
