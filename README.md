@@ -1,6 +1,3 @@
-![image](https://github.com/rohit-sahoo/ArguSense-Elevating_Argument_Evaluation/assets/50145744/528808cf-ab2d-49ce-b4a2-b2d17deca21e)# ArguSense-Elevating_Argument_Evaluation
-Implemented a state-of-the-art NLP model using LongFormers to accurately identify writing structures like thesis statements, evidence, and claims in lengthy argumentative essays, while employing BERT for classifying argumentative elements as "effective," "adequate," or "ineffective".
-
 # ArguSense: Elevating Argument Evaluation using NLP
 
 ## Overview
