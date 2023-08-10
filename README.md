@@ -161,7 +161,7 @@ In the context of this project:
 
 Log loss:
 
-log loss = -1/N * ∑(i=1 to N) ∑(j=1 to M) y_{ij} * log(p_{ij})
+log loss = -1/N * Σ(i=1 to N) Σ(j=1 to M) y_{ij} * log(p_{ij})
 
 Where:
 - N is the number of rows in the test set.
