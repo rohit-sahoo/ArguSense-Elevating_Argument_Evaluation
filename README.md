@@ -6,9 +6,9 @@ Automated writing feedback tools often struggle to accurately identify key writi
 
 ## Project Structure
 
-![Input](https://drive.google.com/file/d/1pzWSdBEYw3Sg4YhrdV_JxqV3zWVb6c9y/view?usp=sharing)
+![Input](https://drive.google.com/uc?export=view&id=1pzWSdBEYw3Sg4YhrdV_JxqV3zWVb6c9y)
 
-![Output](https://drive.google.com/file/d/1AeUoN5Tl5SlzZc7WpKfBPlRyyMN_JiUD/view?usp=sharing)
+![Output](https://drive.google.com/uc?export=view&id=1AeUoN5Tl5SlzZc7WpKfBPlRyyMN_JiUD)
 
 ### Prerequisites
 
