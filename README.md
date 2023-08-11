@@ -6,6 +6,10 @@ Automated writing feedback tools often struggle to accurately identify key writi
 
 ## Project Structure
 
+![Input](https://drive.google.com/file/d/1pzWSdBEYw3Sg4YhrdV_JxqV3zWVb6c9y/view?usp=sharing)
+
+![Output](https://drive.google.com/file/d/1AeUoN5Tl5SlzZc7WpKfBPlRyyMN_JiUD/view?usp=sharing)
+
 ### Prerequisites
 
 Before running the project, ensure you have the following prerequisites installed:
